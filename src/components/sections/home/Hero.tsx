@@ -1,14 +1,20 @@
 "use client";
 import React, { useRef } from "react";
 import { useHeroAnimation } from "@/src/hooks/useHeroAnimation";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const router = useRouter();
 
   // Connect the glue layer
   useHeroAnimation(containerRef, titleRef, buttonRef);
+
+  const handleNavigateToServices = () => {
+    router.push("/services");
+  };
 
   return (
     <section
@@ -24,12 +30,14 @@ export default function Hero() {
           finds its voice.
         </h1>
         <div className="mt-16">
-          <button
-            ref={buttonRef}
-            className="px-10 py-4 bg-primary border border-default hover:border-accent text-primary rounded-full text-xs uppercase tracking-widest font-bold"
-          >
-            Begin the Journey
-          </button>
+          <a href="/services">
+            <button
+              ref={buttonRef}
+              className="px-10 py-4 bg-primary border border-default hover:border-accent text-primary rounded-full text-xs uppercase tracking-widest font-bold transition-colors cursor-pointer"
+            >
+              Begin the Journey
+            </button>
+          </a>
         </div>
       </div>
     </section>
