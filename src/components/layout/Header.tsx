@@ -14,13 +14,31 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
-  }, [isMenuOpen]);
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    // 1. Target the main content for a smooth fade-out
+    const main = document.querySelector("main");
+    if (main) {
+      main.style.transition =
+        "opacity 0.5s ease-in-out, transform 0.5s ease-in-out";
+      main.style.opacity = "0";
+      main.style.transform = "translateY(20px)";
+      main.style.filter = "blur(10px)";
+    }
+
+    // 2. Short delay to allow animation to play before redirect
+    setTimeout(() => {
+      window.location.href = href;
+    }, 500);
+  };
 
   return (
     <header
-      suppressHydrationWarning
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-in-out ${
         isScrolled
           ? "bg-white/90 backdrop-blur-md border-b border-stone-200 h-16 md:h-20"
@@ -30,6 +48,7 @@ export default function Header() {
       <div className="max-w-[1440px] mx-auto h-full px-6 flex justify-between items-center">
         <Link
           href="/"
+          onClick={(e) => handleNavigation(e, "/")}
           className="text-xl md:text-2xl font-bold tracking-tighter text-black z-[110]"
         >
           VIST<span className="text-indigo-600">.</span>
@@ -38,6 +57,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-10">
           <Link
             href="/portfolio"
+            onClick={(e) => handleNavigation(e, "/portfolio")}
             className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
               isScrolled ? "text-black" : "text-stone-500"
             }`}
@@ -46,6 +66,7 @@ export default function Header() {
           </Link>
           <Link
             href="/services"
+            onClick={(e) => handleNavigation(e, "/services")}
             className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
               isScrolled ? "text-black" : "text-stone-500"
             }`}
@@ -54,6 +75,7 @@ export default function Header() {
           </Link>
           <Link
             href="/about"
+            onClick={(e) => handleNavigation(e, "/about")}
             className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
               isScrolled ? "text-black" : "text-stone-500"
             }`}
@@ -62,6 +84,7 @@ export default function Header() {
           </Link>
           <Link
             href="/contact"
+            onClick={(e) => handleNavigation(e, "/contact")}
             className="px-7 py-2.5 rounded-full text-[10px] uppercase font-bold bg-black text-white hover:bg-stone-800 transition-colors"
           >
             Start a Project
@@ -101,29 +124,29 @@ export default function Header() {
         >
           <Link
             href="/portfolio"
-            onClick={() => setIsMenuOpen(false)}
-            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+            onClick={(e) => handleNavigation(e, "/portfolio")}
+            className="text-4xl font-bold"
           >
             Work
           </Link>
           <Link
             href="/services"
-            onClick={() => setIsMenuOpen(false)}
-            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+            onClick={(e) => handleNavigation(e, "/services")}
+            className="text-4xl font-bold"
           >
             Services
           </Link>
           <Link
             href="/about"
-            onClick={() => setIsMenuOpen(false)}
-            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+            onClick={(e) => handleNavigation(e, "/about")}
+            className="text-4xl font-bold"
           >
             About
           </Link>
           <Link
             href="/contact"
-            onClick={() => setIsMenuOpen(false)}
-            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+            onClick={(e) => handleNavigation(e, "/contact")}
+            className="text-4xl font-bold"
           >
             Contact
           </Link>
