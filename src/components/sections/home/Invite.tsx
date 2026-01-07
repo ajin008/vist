@@ -53,7 +53,7 @@ export default function Invite() {
         </h2>
 
         <div className="flex justify-center">
-          <Link
+          <a
             ref={buttonRef}
             href="/contact"
             className="group relative inline-flex items-center justify-center w-48 h-48 md:w-64 md:h-64 bg-white rounded-full transition-transform duration-300"
@@ -69,7 +69,7 @@ export default function Invite() {
             <span className="absolute bottom-12 opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 text-accent">
               ↓
             </span>
-          </Link>
+          </a>
         </div>
       </div>
 
