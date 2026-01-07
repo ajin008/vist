@@ -37,7 +37,7 @@ export default function ContactPage() {
             <div className="space-y-8">
               {/* WhatsApp Option */}
               <a
-                href="https://wa.me/91XXXXXXXXXX" // Replace with your actual number
+                href="https://wa.me/6235235096" // Replace with your actual number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 p-4 rounded-2xl border border-emerald-100 bg-emerald-50/30 hover:bg-emerald-50 transition-all duration-300 w-fit"
