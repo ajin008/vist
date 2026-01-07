@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "../components/layout/Header";
-import SmoothScroll from "../components/layout/SmoothScroll";
+import ClientProviders from "../components/layout/ClientProviders";
 import { GridBackground } from "../components/layout/GridBackground";
 
 const inter = Inter({
@@ -23,13 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="antialiased">
-        {/* Header stays outside of page-container to allow full-bleed background */}
-
         <GridBackground />
-        <SmoothScroll>
-          <Header />
-          <main className="page-container">{children}</main>
-        </SmoothScroll>
+        {/* All Hydration-sensitive components are now inside here */}
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

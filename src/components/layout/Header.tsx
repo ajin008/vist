@@ -14,17 +14,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent scrolling when mobile menu is active
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
   }, [isMenuOpen]);
 
   return (
     <header
+      suppressHydrationWarning
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-in-out ${
         isScrolled
           ? "bg-white/90 backdrop-blur-md border-b border-stone-200 h-16 md:h-20"
@@ -32,79 +28,105 @@ export default function Header() {
       }`}
     >
       <div className="max-w-[1440px] mx-auto h-full px-6 flex justify-between items-center">
-        {/* Logo - Ensuring it stays visible and high z-index */}
         <Link
           href="/"
-          className="text-xl md:text-2xl font-bold tracking-tighter text-primary z-[110]"
+          className="text-xl md:text-2xl font-bold tracking-tighter text-black z-[110]"
         >
-          VIST<span className="text-accent">.</span>
+          VIST<span className="text-indigo-600">.</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-10">
-          {["Work", "Services", "About"].map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-colors duration-300 ${
-                isScrolled ? "text-stone-900" : "text-stone-500"
-              } hover:text-accent`}
-            >
-              {item}
-            </Link>
-          ))}
+          <Link
+            href="/portfolio"
+            className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
+              isScrolled ? "text-black" : "text-stone-500"
+            }`}
+          >
+            Work
+          </Link>
+          <Link
+            href="/services"
+            className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
+              isScrolled ? "text-black" : "text-stone-500"
+            }`}
+          >
+            Services
+          </Link>
+          <Link
+            href="/about"
+            className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
+              isScrolled ? "text-black" : "text-stone-500"
+            }`}
+          >
+            About
+          </Link>
           <Link
             href="/contact"
-            className="px-7 py-2.5 rounded-full text-[10px] uppercase tracking-widest font-bold bg-black text-white hover:bg-accent transition-all duration-300"
+            className="px-7 py-2.5 rounded-full text-[10px] uppercase font-bold bg-black text-white hover:bg-stone-800 transition-colors"
           >
             Start a Project
           </Link>
         </nav>
 
-        {/* Mobile Toggle - Fix: Ensure visibility with explicit colors */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden z-[110] p-2 flex flex-col gap-1.5 focus:outline-none"
-          aria-label="Toggle Menu"
+          className="md:hidden z-[110] p-2 flex flex-col gap-1.5"
+          aria-label="Toggle menu"
         >
-          {/* Top Line */}
           <span
-            className={`h-0.5 w-6 transition-all duration-300 ease-in-out ${
-              isMenuOpen ? "bg-black rotate-45 translate-y-2" : "bg-black"
+            className={`h-0.5 w-6 bg-black transition-all ${
+              isMenuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
-          {/* Middle Line */}
           <span
-            className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-              isMenuOpen ? "opacity-0" : "opacity-100"
+            className={`h-0.5 w-6 bg-black transition-all ${
+              isMenuOpen ? "opacity-0" : ""
             }`}
           />
-          {/* Bottom Line */}
           <span
-            className={`h-0.5 w-6 transition-all duration-300 ease-in-out ${
-              isMenuOpen ? "bg-black -rotate-45 -translate-y-2" : "bg-black"
+            className={`h-0.5 w-6 bg-black transition-all ${
+              isMenuOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
         </button>
 
-        {/* Mobile Full-Screen Overlay */}
+        {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-[#fafaf9] z-[105] flex flex-col justify-center items-center gap-8 transition-all duration-500 ease-in-out md:hidden ${
+          className={`fixed inset-0 bg-[#fafaf9] z-[105] flex flex-col justify-center items-center gap-8 transition-all duration-500 ${
             isMenuOpen
-              ? "opacity-100 visible"
-              : "opacity-0 invisible translate-y-full"
+              ? "translate-y-0 opacity-100"
+              : "translate-y-full opacity-0 invisible"
           }`}
         >
-          {["Work", "Services", "About", "Contact"].map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              onClick={() => setIsMenuOpen(false)}
-              className="text-4xl font-bold tracking-tighter text-primary active:text-accent"
-            >
-              {item}
-            </Link>
-          ))}
+          <Link
+            href="/portfolio"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+          >
+            Work
+          </Link>
+          <Link
+            href="/services"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+          >
+            Services
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-4xl font-bold hover:text-indigo-600 transition-colors"
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </header>
