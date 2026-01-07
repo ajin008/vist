@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* ===============================
+   THEME TOKENS (VIST HIGH-INTENSITY)
+================================ */
+
+:root {
+  /* Base — refined ink & paper */
+  --color-bg: #fafaf9; /* warm paper white */
+  --color-text: #1a1a1a; /* deep ink black */
+  --color-muted: #737373; /* softer mid-gray */
+  --color-border: #e7e5e4; /* subtle stone border */
+
+  --color-primary: var(--color-bg);
+
+  /* NEW: High-Intensity Electric Indigo Accent */
+  /* Replaces the soft cyan with a powerful, premium brand color */
+  --color-accent: #4f46e5; /* Vivid Indigo-600 */
+  --color-accent-soft: #eef2ff; /* Whisper Indigo-50 for "Relief" sections */
+
+  /* State & Interactive */
+  --color-hover: #4338ca; /* Darker Indigo-700 for buttons/links */
+  --color-focus: #4f46e5; /* Focus ring color */
+
+  /* Typography & Spacing Tokens */
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --leading-tight: 1.1;
+  --leading-normal: 1.5;
+
+  /* Layout Tokens */
+  --nav-height: 80px;
+  --glass-bg: rgba(250, 250, 249, 0.8);
+
+  --glow-indigo: rgba(79, 70, 224, 0.15);
+  --glow-pulse: rgba(79, 70, 224, 0.4);
+}
+
+/* ===============================
+   BASE STYLES
+================================ */
+
+html,
+body {
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   COLOR UTILITIES
+================================ */
+
+/* Text Utilities */
+.text-primary {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Background Utilities */
+.bg-primary {
+  background-color: var(--color-bg);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-accent-soft {
+  background-color: var(--color-accent-soft);
+}
+
+/* Border Utilities */
+.border-default {
+  border-color: var(--color-border);
+}
+
+/* ===============================
+   LAYOUT UTILITIES
+================================ */
+
+.page-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding-inline: 2rem;
+  }
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* ===============================
+   PREMIUM UI COMPONENTS
+================================ */
+
+.text-tight {
+  line-height: var(--leading-tight);
+}
+
+.glass-nav {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--color-muted);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+/* Global Button Base */
+.btn-vist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Add these custom animations */
+@theme {
+  --animate-fade-in: fadeIn 0.8s ease-out;
+  --animate-slide-up: slideUp 0.8s ease-out;
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-ping: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+/* Animation delays */
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
