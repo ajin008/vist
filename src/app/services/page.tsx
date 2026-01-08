@@ -13,8 +13,16 @@ const services = [
     number: "02",
     title: "Web Experience",
     description:
-      "High-performance digital platforms built with Next.js. We prioritize speed, accessibility, and immersive user experiences.",
-    tags: ["Next.js", "E-commerce", "SaaS"],
+      "High-performance digital platforms . We prioritize speed, accessibility, and immersive user experiences.",
+    tags: [
+      "Web Development",
+      "App Development",
+      "E-commerce",
+      "SaaS",
+      "CMS",
+      "PWA",
+      "Custom Solutions",
+    ],
   },
   {
     number: "03",

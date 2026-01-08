@@ -7,6 +7,11 @@ const projects = [
   { title: "Jobify", category: "Career Platform", img: "/jobify.jpg" },
   { title: "Learn99", category: "EdTech Solution", img: "/learn99.jpg" },
   { title: "Botanica", category: "E-commerce / IoT", img: "/botanica.jpg" },
+  {
+    title: "MeerasEstuff",
+    category: "Online Marketplace",
+    img: "/meerasEstuf.jpg",
+  },
 ];
 
 export default function PortfolioPage() {
