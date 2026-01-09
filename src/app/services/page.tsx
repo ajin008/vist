@@ -13,14 +13,12 @@ const services = [
     number: "02",
     title: "Web Experience",
     description:
-      "High-performance digital platforms . We prioritize speed, accessibility, and immersive user experiences.",
+      "High-performance digital platforms. We prioritize speed, accessibility, and immersive user experiences.",
     tags: [
       "Web Development",
       "App Development",
       "E-commerce",
       "SaaS",
-      "CMS",
-      "PWA",
       "Custom Solutions",
     ],
   },
@@ -37,6 +35,20 @@ const services = [
     description:
       "Visual storytelling that converts. We create premium digital assets and motion graphics tailored for high-end audiences.",
     tags: ["Motion", "Graphics", "UI/UX"],
+  },
+  {
+    number: "05",
+    title: "Taxation & GST",
+    description:
+      "End-to-end GST and TDS compliance. We handle everything from registration and monthly filings to E-way bill logistics and tax payments.",
+    tags: ["GST Filing", "Registration", "E-Way Bill", "TDS Returns"],
+  },
+  {
+    number: "06",
+    title: "Financial Advisory",
+    description:
+      "Professional financial modeling and project reports designed for loan renewals and business scaling. We turn data into growth strategies.",
+    tags: ["Project Reports", "Projections", "Loan Renewal", "CMA Data"],
   },
 ];
 
@@ -62,7 +74,7 @@ export default function ServicesPage() {
           </span>
           <h2 className="text-5xl md:text-8xl font-bold text-slate-900 tracking-tighter leading-[0.9]">
             Solutions for the <br />
-            <span className="text-stone-300">Next Digital Era</span>
+            <span className="text-stone-300">Modern Business</span>
             <span className="text-indigo-600">.</span>
           </h2>
         </div>
@@ -115,7 +127,7 @@ export default function ServicesPage() {
         {/* Call to Action */}
         <div className="mt-32 pt-20 border-t border-stone-100 flex flex-col items-center text-center">
           <h4 className="text-3xl md:text-5xl font-bold tracking-tight mb-8">
-            Ready to evolve?
+            Ready to scale?
           </h4>
           <a
             href="/contact"
