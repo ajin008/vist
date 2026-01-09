@@ -29,18 +29,25 @@ export default function AboutPage() {
               legacies<span className="text-indigo-600">.</span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-light">
-              VIST is a boutique digital studio specializing in high-end web
-              experiences and AI-driven automation. We bridge the gap between
-              aesthetic excellence and technical precision.
+              VIST is a multi-disciplinary studio bridging the gap between
+              <span className="font-medium text-slate-900">
+                {" "}
+                creative excellence
+              </span>{" "}
+              and
+              <span className="font-medium text-slate-900">
+                {" "}
+                operational precision
+              </span>
+              . From high-end web experiences to complex financial compliance,
+              we fuel every aspect of the modern enterprise.
             </p>
           </div>
 
           {/* Kozhikode Pulsing Marker */}
           <div className="relative p-8 bg-white rounded-3xl border border-stone-100 shadow-sm flex items-center gap-4 self-center md:self-start">
             <div className="relative flex h-4 w-4">
-              {/* Outer Pulse */}
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-              {/* Solid Inner Dot */}
               <span className="relative inline-flex rounded-full h-4 w-4 bg-indigo-600"></span>
             </div>
             <div>
@@ -54,39 +61,76 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Stats / Philosophy Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-stone-100 pt-16">
+        {/* Philosophy Grid - Now with 4 columns to include Finance */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-t border-stone-100 pt-16">
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
               Our Vision
             </h3>
-            <p className="text-slate-500 leading-relaxed">
-              To redefine the boundaries of what a digital agency can be by
-              integrating Artificial Intelligence into the creative process.
+            <p className="text-slate-500 leading-relaxed text-sm">
+              To redefine the boundaries of a digital agency by integrating
+              Artificial Intelligence and high-level strategy into the creative
+              process.
             </p>
           </div>
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
               Our Craft
             </h3>
-            <p className="text-slate-500 leading-relaxed">
+            <p className="text-slate-500 leading-relaxed text-sm">
               Every line of code and every pixel is placed with intent. We
               don&apos;t just build websites; we curate digital environments.
             </p>
           </div>
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
+              Financial Rigor
+            </h3>
+            <p className="text-slate-500 leading-relaxed text-sm">
+              Beyond the screen, we manage the vitals. Our taxation and
+              financial advisory services ensure your business stays compliant
+              and ready for scale.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
               Our Roots
             </h3>
-            <p className="text-slate-500 leading-relaxed">
-              Deeply rooted in the vibrant tech landscape of Kozhikode, serving
-              clients across the globe with Kerala&apos;s signature precision.
+            <p className="text-slate-500 leading-relaxed text-sm">
+              Deeply rooted in the tech landscape of Kozhikode, serving global
+              clients with Kerala&apos;s signature precision and work ethic.
             </p>
           </div>
         </div>
 
+        {/* Dual Focus Section */}
+        {/* <div className="mt-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-slate-900 p-12 rounded-[2rem] text-white flex flex-col justify-between min-h-[400px]">
+            <h4 className="text-3xl font-bold tracking-tight">
+              Digital & AI
+              <br />
+              <span className="text-slate-500">Innovation</span>
+            </h4>
+            <p className="text-slate-400">
+              Transforming ideas into high-performance web experiences and
+              automated workflows.
+            </p>
+          </div>
+          <div className="bg-stone-100 p-12 rounded-[2rem] text-slate-900 flex flex-col justify-between min-h-[400px]">
+            <h4 className="text-3xl font-bold tracking-tight">
+              Finance & Tax
+              <br />
+              <span className="text-stone-400">Architecture</span>
+            </h4>
+            <p className="text-slate-500">
+              Handling GST, TDS, and financial modeling so you can focus on
+              building your empire.
+            </p>
+          </div>
+        </div> */}
+
         {/* Dynamic Image/Card Section */}
-        <div className="mt-32 relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden group">
+        <div className="mt-12 relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden group">
           <Image
             src="/about.jpg"
             alt="Vist Digital Studio"
@@ -97,9 +141,9 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-12 left-12 text-white">
             <h4 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Human Intelligence.
+              Creative Vision.
               <br />
-              Artificial Speed.
+              Analytical Depth.
             </h4>
           </div>
         </div>
