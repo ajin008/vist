@@ -3,14 +3,35 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const projects = [
-  { title: "Lens", category: "AI Visual Branding", img: "/lens.jpg" },
-  { title: "Jobify", category: "Career Platform", img: "/jobify.jpg" },
-  { title: "Learn99", category: "EdTech Solution", img: "/learn99.jpg" },
-  { title: "Botanica", category: "E-commerce / IoT", img: "/botanica.jpg" },
+  {
+    title: "Lens",
+    category: "AI Visual Branding",
+    img: "/lens.jpg",
+    url: "https://lense24.com/",
+  },
+  {
+    title: "Jobify",
+    category: "Career Platform",
+    img: "/jobify.jpg",
+    url: "https://www.jobifyservice.online/",
+  },
+  {
+    title: "Learn99",
+    category: "EdTech Solution",
+    img: "/learn99.jpg",
+    url: "#", // Add actual URL here
+  },
+  {
+    title: "Botanica",
+    category: "E-commerce / IoT",
+    img: "/botanica.jpg",
+    url: "#", // Add actual URL here
+  },
   {
     title: "MeerasEstuff",
     category: "Online Marketplace",
     img: "/meerasEstuf.jpg",
+    url: "#", // Add actual URL here
   },
 ];
 
@@ -40,13 +61,16 @@ export default function PortfolioPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
           {projects.map((project, index) => (
-            <div
+            <a
               key={project.title}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 transitionDelay: `${index * 150}ms`,
                 transitionDuration: "800ms",
               }}
-              className={`group relative overflow-hidden rounded-2xl border border-slate-200 bg-white/50 backdrop-blur-sm transition-all ease-out ${
+              className={`group relative overflow-hidden rounded-2xl border border-slate-200 bg-white/50 backdrop-blur-sm transition-all ease-out block ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-20"
@@ -89,7 +113,7 @@ export default function PortfolioPage() {
                   </svg>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

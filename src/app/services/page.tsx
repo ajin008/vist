@@ -50,6 +50,19 @@ const services = [
       "Professional financial modeling and project reports designed for loan renewals and business scaling. We turn data into growth strategies.",
     tags: ["Project Reports", "Projections", "Loan Renewal", "CMA Data"],
   },
+  {
+    number: "07",
+    title: "BIM Engineering",
+    description:
+      "Advanced Building Information Modeling for construction excellence. We deliver precise 3D models, clash detection, and coordinated documentation for seamless project execution.",
+    tags: [
+      "BIM Modeling",
+      "Revit",
+      "3D Coordination",
+      "MEP Design",
+      "Clash Detection",
+    ],
+  },
 ];
 
 export default function ServicesPage() {
