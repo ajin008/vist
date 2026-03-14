@@ -4,64 +4,52 @@ import { useState, useEffect } from "react";
 const services = [
   {
     number: "01",
-    title: "Brand Strategy",
+    title: "Custom Software Development",
     description:
-      "We define your digital DNA. From visual identity to market positioning, we ensure your brand speaks with a singular, powerful voice.",
-    tags: ["Identity", "Strategy", "Positioning"],
+      "We build tailored software systems designed around your business workflow. From internal tools to full-scale platforms, our solutions help businesses operate faster and smarter.",
+    tags: ["Business Tools", "Automation", "Custom Systems"],
   },
   {
     number: "02",
-    title: "Web Experience",
+    title: "Web Development",
     description:
-      "High-performance digital platforms. We prioritize speed, accessibility, and immersive user experiences.",
-    tags: [
-      "Web Development",
-      "App Development",
-      "E-commerce",
-      "SaaS",
-      "Custom Solutions",
-    ],
+      "High-performance websites built for modern businesses. Fast, scalable, and optimized for conversions with seamless user experience.",
+    tags: ["Business Websites", "Landing Pages", "Web Applications"],
   },
   {
     number: "03",
-    title: "AI Integration",
+    title: "Mobile App Development",
     description:
-      "Future-proof your business. We implement custom AI solutions and automated workflows to scale your operations effortlessly.",
-    tags: ["LLMs", "Automation", "Workflows"],
+      "Cross-platform mobile applications that bring your business closer to customers. Built for performance, scalability, and great user experience.",
+    tags: ["iOS", "Android", "React Native Apps"],
   },
   {
     number: "04",
-    title: "Content Design",
+    title: "E-commerce Development",
     description:
-      "Visual storytelling that converts. We create premium digital assets and motion graphics tailored for high-end audiences.",
-    tags: ["Motion", "Graphics", "UI/UX"],
+      "Complete e-commerce solutions for selling products online. From storefront design to payment integration and order management systems.",
+    tags: ["Online Stores", "Payment Integration", "Inventory Systems"],
   },
   {
     number: "05",
-    title: "Taxation & GST",
+    title: "Business Automation Systems",
     description:
-      "End-to-end GST and TDS compliance. We handle everything from registration and monthly filings to E-way bill logistics and tax payments.",
-    tags: ["GST Filing", "Registration", "E-Way Bill", "TDS Returns"],
+      "We automate repetitive business processes and workflows to improve efficiency and reduce manual work.",
+    tags: ["Workflow Automation", "Process Automation", "Integrations"],
   },
   {
     number: "06",
-    title: "Financial Advisory",
+    title: "Lead Management & CRM Systems",
     description:
-      "Professional financial modeling and project reports designed for loan renewals and business scaling. We turn data into growth strategies.",
-    tags: ["Project Reports", "Projections", "Loan Renewal", "CMA Data"],
+      "Custom CRM and lead tracking systems designed specifically for your sales workflow. Manage enquiries, follow-ups, and customer data in one place.",
+    tags: ["Lead Tracking", "CRM Systems", "Sales Automation"],
   },
   {
     number: "07",
-    title: "BIM Engineering",
+    title: "Consultation & Booking Systems",
     description:
-      "Advanced Building Information Modeling for construction excellence. We deliver precise 3D models, clash detection, and coordinated documentation for seamless project execution.",
-    tags: [
-      "BIM Modeling",
-      "Revit",
-      "3D Coordination",
-      "MEP Design",
-      "Clash Detection",
-    ],
+      "Online booking platforms for businesses offering consultations, services, or appointments. Simplify scheduling and client management.",
+    tags: ["Booking Systems", "Appointment Management", "Client Portals"],
   },
 ];
 
