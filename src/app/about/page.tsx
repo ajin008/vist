@@ -21,26 +21,18 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-32">
           <div className="max-w-2xl">
             <span className="text-indigo-600 font-bold tracking-widest uppercase text-[10px] block mb-4">
-              Our Essence
+              Who We Are
             </span>
             <h2 className="text-5xl md:text-8xl font-bold text-slate-900 tracking-tighter leading-[0.9] mb-8">
               We build <span className="text-stone-300 italic">digital</span>{" "}
               <br />
-              legacies<span className="text-indigo-600">.</span>
+              systems<span className="text-indigo-600">.</span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-light">
-              VIST is a multi-disciplinary studio bridging the gap between
-              <span className="font-medium text-slate-900">
-                {" "}
-                creative excellence
-              </span>{" "}
-              and
-              <span className="font-medium text-slate-900">
-                {" "}
-                operational precision
-              </span>
-              . From high-end web experiences to complex financial compliance,
-              we fuel every aspect of the modern enterprise.
+              VIST is a digital solutions studio focused on building modern
+              software systems for businesses. From high-performance websites
+              and mobile apps to workflow automation and AI-powered tools, we
+              help companies transform ideas into scalable digital products.
             </p>
           </div>
 
@@ -61,76 +53,54 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Philosophy Grid - Now with 4 columns to include Finance */}
+        {/* Philosophy Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-t border-stone-100 pt-16">
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
               Our Vision
             </h3>
             <p className="text-slate-500 leading-relaxed text-sm">
-              To redefine the boundaries of a digital agency by integrating
-              Artificial Intelligence and high-level strategy into the creative
-              process.
+              To help businesses operate smarter by building powerful digital
+              tools, automation systems, and scalable software platforms.
             </p>
           </div>
+
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
               Our Craft
             </h3>
             <p className="text-slate-500 leading-relaxed text-sm">
-              Every line of code and every pixel is placed with intent. We
-              don&apos;t just build websites; we curate digital environments.
+              Every line of code is written with purpose. We focus on creating
+              reliable, scalable digital systems that simplify operations and
+              deliver real business value.
             </p>
           </div>
+
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
-              Financial Rigor
+              Engineering Excellence
             </h3>
             <p className="text-slate-500 leading-relaxed text-sm">
-              Beyond the screen, we manage the vitals. Our taxation and
-              financial advisory services ensure your business stays compliant
-              and ready for scale.
+              Our development process emphasizes clean architecture,
+              performance, and scalability. We build systems designed to grow
+              with your business.
             </p>
           </div>
+
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-indigo-600">
               Our Roots
             </h3>
             <p className="text-slate-500 leading-relaxed text-sm">
-              Deeply rooted in the tech landscape of Kozhikode, serving global
-              clients with Kerala&apos;s signature precision and work ethic.
+              Based in Kozhikode, we collaborate with businesses across
+              industries to build digital products that combine modern
+              technology with practical business needs.
             </p>
           </div>
         </div>
 
-        {/* Dual Focus Section */}
-        {/* <div className="mt-32 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-slate-900 p-12 rounded-[2rem] text-white flex flex-col justify-between min-h-[400px]">
-            <h4 className="text-3xl font-bold tracking-tight">
-              Digital & AI
-              <br />
-              <span className="text-slate-500">Innovation</span>
-            </h4>
-            <p className="text-slate-400">
-              Transforming ideas into high-performance web experiences and
-              automated workflows.
-            </p>
-          </div>
-          <div className="bg-stone-100 p-12 rounded-[2rem] text-slate-900 flex flex-col justify-between min-h-[400px]">
-            <h4 className="text-3xl font-bold tracking-tight">
-              Finance & Tax
-              <br />
-              <span className="text-stone-400">Architecture</span>
-            </h4>
-            <p className="text-slate-500">
-              Handling GST, TDS, and financial modeling so you can focus on
-              building your empire.
-            </p>
-          </div>
-        </div> */}
-
         {/* Dynamic Image/Card Section */}
-        <div className="mt-12 relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden group">
+        <div className="mt-12 relative h-100 md:h-150 rounded-4xl overflow-hidden group">
           <Image
             src="/about.jpg"
             alt="Vist Digital Studio"
@@ -138,12 +108,12 @@ export default function AboutPage() {
             className="object-cover transition-transform duration-1000 group-hover:scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-12 left-12 text-white">
             <h4 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Creative Vision.
+              Digital Innovation.
               <br />
-              Analytical Depth.
+              Built for Scale.
             </h4>
           </div>
         </div>
