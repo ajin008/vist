@@ -90,14 +90,20 @@ export default function ContactPage() {
                   Interested In
                 </label>
                 <select className="w-full px-6 py-4 bg-stone-50 border-transparent rounded-2xl focus:bg-white focus:border-indigo-200 focus:ring-0 transition-all outline-none appearance-none">
-                  <option value="web-development">App & Web Experience</option>
-                  <option value="gst-taxation">GST & Taxation Services</option>
-                  <option value="financial-projections">
-                    Project Reports & Projections
+                  <option value="web-development">Website Development</option>
+                  <option value="mobile-app">Mobile App Development</option>
+                  <option value="ecommerce">E-commerce Development</option>
+                  <option value="custom-software">
+                    Custom Software Development
+                  </option>
+                  <option value="crm-systems">
+                    Lead Management / CRM Systems
+                  </option>
+                  <option value="automation">Business Automation</option>
+                  <option value="booking-system">
+                    Consultation / Booking System
                   </option>
                   <option value="ai-automation">AI Automation</option>
-                  <option value="branding">Brand Strategy</option>
-                  <option value="content-design">Content Design</option>
                 </select>
               </div>
 
