@@ -16,6 +16,18 @@ const projects = [
     url: "https://www.jobifyservice.online/",
   },
   {
+    title: "Velorah",
+    category: "Agency ",
+    img: "/agency.png",
+    url: "https://glassy-dawn.lovable.app",
+  },
+  {
+    title: "Orbis NFT",
+    category: "Landing Page",
+    img: "/Orbis.png",
+    url: "https://id-preview--5cc9a24d-088d-4975-98ca-f9cb0db60745.lovable.app/",
+  },
+  {
     title: "Learn99",
     category: "EdTech Solution",
     img: "/learn99.jpg",
@@ -76,7 +88,7 @@ export default function PortfolioPage() {
                   : "opacity-0 translate-y-20"
               }`}
             >
-              <div className="aspect-[4/3] md:aspect-[16/10] overflow-hidden relative">
+              <div className="aspect-4/3 md:aspect-16/10 overflow-hidden relative">
                 <Image
                   src={project.img}
                   alt={project.title}
